@@ -1,5 +1,6 @@
 const express = require('express');
-app = express()const linebot = require('linebot');// 判別開發環境
+const app = express();
+const linebot = require('linebot');// 判別開發環境
 if (process.env.NODE_ENV !== 'production') {      // 如果不是 production 模式
  require('dotenv').config()                      // 使用 dotenv 讀取 .env 檔案
 }const bot = linebot({
