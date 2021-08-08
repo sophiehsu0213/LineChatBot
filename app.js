@@ -12,7 +12,7 @@ let words = "";
 function WordLocation(term) {
     return words.contains(term);
 }
-const linebotParser = bot.parser();bot.on('message', function (event) {
+const linebotParser = bot.parser();bot.on('message', function (event), function WordLocation(term) {
    words = event.message.text;
  console.log(event);
  switch (true) {
