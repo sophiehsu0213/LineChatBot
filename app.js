@@ -8,11 +8,12 @@ if (process.env.NODE_ENV !== 'production') {      // 如果不是 production 模
  channelSecret: process.env.CHANNEL_SECRET,
  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
+let words = "";
+function WordLocation(term) {
+    return words.contains(term);
+}
 const linebotParser = bot.parser();bot.on('message', function (event) {
-  let words = event.message.text;
-  function WordLocation(term) {
-      return words.contains(term);
-  }
+   words = event.message.text;
  console.log(event);
  switch (true) {
    case WordLocation('你'):
