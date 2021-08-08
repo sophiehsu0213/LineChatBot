@@ -15,7 +15,7 @@ function findWords(term){
 const linebotParser = bot.parser();bot.on('message', function (event) {
   words = event.message.text;
  console.log(event);
- if(findWords('你')){
+ if(event.message.text == '你'){
    event.reply('你是誰?我是誰?誰又知道呢?')
  }else{
    event.reply('無法辨識');
