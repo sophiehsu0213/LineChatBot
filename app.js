@@ -8,39 +8,34 @@ if (process.env.NODE_ENV !== 'production') {      // 如果不是 production 模
  channelSecret: process.env.CHANNEL_SECRET,
  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
-let words = "";
-const linebotParser = bot.parser();bot.on('message', function (event){
-   words = event.message.text;
+const linebotParser = bot.parser();bot.on('message', function (event) {
  console.log(event);
- if(words.includes('你')){
-   event.reply('你是誰?我是誰?誰又知道呢?')
- }
- switch (true) {
-   case WordLocation('你'):
+ switch (event.message.text) {
+   case '你':
      event.reply('你是誰?我是誰?誰又知道呢?')
      break
-   case WordLocation('hi'):
+   case 'hi':
      event.reply('hi!很高興看到你!來跟我聊天吧!')
      break
-   case WordLocation('hello'):
+   case 'hello':
      event.reply('哈囉!很高興看到你!來跟我聊天吧!')
      break
-   case  WordLocation('天氣'):
+   case '天氣':
      event.reply('今天天氣依舊如此美好，就如同我的心情:)')
      break
-   case  WordLocation('聽說'):
+   case '聽說':
      event.reply('什麼????')
      break
-   case  WordLocation('問'):
+   case '問':
      event.reply('駭客都是自學的，自己去查')
      break
-   case  WordLocation('說'):
+   case '說':
      event.reply('說什麼說，不要再說了，等吃飽再說吧！')
      break
-   case  WordLocation('名字'):
+   case '名字':
      event.reply('我是河豚，你叫什麼?')
      break
-   case  WordLocation('排球少年'):
+   case '排球':
      event.reply('一萬超愛排球少年！')
      break
    default:
