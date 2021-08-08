@@ -12,34 +12,34 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
  console.log(event);
  switch (event.message.text) {
    case '你':
-     event.reply('我快餓昏了，拜託你！')
+     event.reply('你是誰?我是誰?誰又知道呢?')
      break
    case 'hi':
-     event.reply('我等你等好久了，給我東西吃！')
+     event.reply('hi!很高興看到你!來跟我聊天吧!')
      break
    case 'hello':
-     event.reply('我沒心情跟你說 hello，我需要食物！')
+     event.reply('哈囉!很高興看到你!來跟我聊天吧!')
      break
    case '天氣':
-     event.reply('別管天氣了，我餓到快沒力氣了！')
+     event.reply('今天天氣依舊如此美好，就如同我的心情:)')
      break
    case '聽說':
-     event.reply('聽說什麼，你沒聽到我說我肚子好餓嗎？')
+     event.reply('什麼????')
      break
    case '問':
-     event.reply('問什麼不重要，重要是我肚子好餓，給我東西吃！')
+     event.reply('駭客都是自學的，自己去查')
      break
    case '說':
      event.reply('說什麼說，不要再說了，等吃飽再說吧！')
      break
    case '名字':
-     event.reply('我叫小雞，你是我的主人，你不知道嗎？')
+     event.reply('我是河豚，你叫什麼?')
      break
-   case '媽媽':
-     event.reply('你就是我媽，我受不了！')
+   case '排球':
+     event.reply('一萬超愛排球少年！')
      break
    default:
-     event.reply('不要再說了，我肚子好餓，趕快餵我！')
+     event.reply('偶不知道你在說啥，不過你可以繼續說:)')
  }
 });app.post('/', linebotParser);app.listen(process.env.PORT || 3000, () => {
  console.log('Express server start')
