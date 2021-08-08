@@ -17,8 +17,32 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
  console.log(event);
  if(findWords('你')){
    event.reply('你是誰?我是誰?誰又知道呢?')
+ }else if(findWords('hi')){
+   event.reply('hi!很高興看到你!來跟我聊天吧!')
+ }else if(findWords('hello')){
+   event.reply('哈囉!很高興看到你!來跟我聊天吧!')
+ }else if(findWords('天氣')){
+   event.reply('今天天氣依舊如此美好，就如同我的心情:)')
+ }else if(findWords('聽說')){
+   event.reply('什麼????')
+ }else if(findWords('問')){
+   event.reply('駭客都是自學的，自己去查')
+ }else if(findWords('說')){
+   event.reply('說說說就你最吵')
+ }else if(findWords('名字')){
+   event.reply('我是河豚，你叫什麼?')
+ }else if(findWords('排球')){
+   event.reply('一萬超愛排球少年！')
+ }else if(findWords('我')&&findWords('傷心') || findWords('傷心')){
+   event.reply('不要傷心啦！打起精神來!你最棒的!')
+ }else if(findWords('開心')){
+   event.reply('耶依~')
+ }else if(findWords('笑')|| findWords('哈')){
+   event.reply('哈哈哈笑死XDDD')
+ }else if(findWords('哪個')|| findWords('選')){
+   event.reply('都可以ㄅ')
  }else{
-   event.reply('無法辨識');
+   event.reply('偶不知道你在說啥，不過你可以繼續說:)')
  }
  /*
  switch (event.message.text) {
