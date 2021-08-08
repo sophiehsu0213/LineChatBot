@@ -9,33 +9,37 @@ if (process.env.NODE_ENV !== 'production') {      // 如果不是 production 模
  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
 const linebotParser = bot.parser();bot.on('message', function (event) {
+  let words = event.message.text;
+  function WordLocation(term) {
+      return words.contains(term);
+  }
  console.log(event);
- switch (event.message.text) {
-   case '你':
+ switch (true) {
+   case WordLocation('你'):
      event.reply('你是誰?我是誰?誰又知道呢?')
      break
-   case 'hi':
+   case WordLocation('hi'):
      event.reply('hi!很高興看到你!來跟我聊天吧!')
      break
-   case 'hello':
+   case WordLocation('hello'):
      event.reply('哈囉!很高興看到你!來跟我聊天吧!')
      break
-   case '天氣':
+   case  WordLocation('天氣'):
      event.reply('今天天氣依舊如此美好，就如同我的心情:)')
      break
-   case '聽說':
+   case  WordLocation('聽說'):
      event.reply('什麼????')
      break
-   case '問':
+   case  WordLocation('問'):
      event.reply('駭客都是自學的，自己去查')
      break
-   case '說':
+   case  WordLocation('說'):
      event.reply('說什麼說，不要再說了，等吃飽再說吧！')
      break
-   case '名字':
+   case  WordLocation('名字'):
      event.reply('我是河豚，你叫什麼?')
      break
-   case '排球少年':
+   case  WordLocation('排球少年'):
      event.reply('一萬超愛排球少年！')
      break
    default:
