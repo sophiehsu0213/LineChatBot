@@ -35,7 +35,7 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
    case '名字':
      event.reply('我是河豚，你叫什麼?')
      break
-   case '排球':
+   case '排球少年':
      event.reply('一萬超愛排球少年！')
      break
    default:
