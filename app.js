@@ -17,7 +17,7 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
  console.log(event);
  if(findWords('你是')){
    event.reply('你是誰?我是誰?誰又知道呢?')
- }else if(findWords('hi')){
+ }else if(findWords('hi')||findWords('嗨')){
    event.reply('hi!很高興看到你!來跟我聊天吧!')
  }else if(findWords('hello')){
    event.reply('哈囉!很高興看到你!來跟我聊天吧!')
