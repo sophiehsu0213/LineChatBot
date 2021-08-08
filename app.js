@@ -17,7 +17,10 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
  console.log(event);
  if(findWords('你')){
    event.reply('你是誰?我是誰?誰又知道呢?')
- }/*
+ }else{
+   event.reply(words);
+ }
+ /*
  switch (event.message.text) {
    case '你':
      event.reply('你是誰?我是誰?誰又知道呢?')
