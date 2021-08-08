@@ -33,6 +33,8 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
    event.reply('我是河豚，你叫什麼?')
  }else if(findWords('排球')){
    event.reply('一萬超愛排球少年！')
+ }else if(findWords('我')){
+   event.reply('嗨!很高興認識你!')
  }else if(findWords('我')&&findWords('傷心') || findWords('傷心')){
    event.reply('不要傷心啦！打起精神來!你最棒的!')
  }else if(findWords('開心')){
