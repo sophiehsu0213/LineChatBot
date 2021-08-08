@@ -29,7 +29,7 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
    event.reply('駭客都是自學的，自己去查')
  }else if(findWords('說')){
    event.reply('說說說就你最吵')
- }else if(findWords('名字')){
+ }else if(findWords('名字')||findWords('你叫')){
    event.reply('我是河豚，你叫什麼?')
  }else if(findWords('排球')){
    event.reply('一萬超愛排球少年！')
