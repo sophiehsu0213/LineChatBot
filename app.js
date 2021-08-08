@@ -9,12 +9,12 @@ if (process.env.NODE_ENV !== 'production') {      // 如果不是 production 模
  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
 let words = "";
-function WordLocation(term) {
-    return words.contains(term);
-}
-const linebotParser = bot.parser();bot.on('message', function (event), function WordLocation(term) {
+const linebotParser = bot.parser();bot.on('message', function (event){
    words = event.message.text;
  console.log(event);
+ if(words.includes('你')){
+   event.reply('你是誰?我是誰?誰又知道呢?')
+ }
  switch (true) {
    case WordLocation('你'):
      event.reply('你是誰?我是誰?誰又知道呢?')
