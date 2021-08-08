@@ -8,8 +8,16 @@ if (process.env.NODE_ENV !== 'production') {      // 如果不是 production 模
  channelSecret: process.env.CHANNEL_SECRET,
  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
+var words = "";
+function findWords(term){
+  return words.include(term);
+}
 const linebotParser = bot.parser();bot.on('message', function (event) {
+  words = event.message.text;
  console.log(event);
+ if(findWords('你')){
+   event.reply('你是誰?我是誰?誰又知道呢?')
+ }/*
  switch (event.message.text) {
    case '你':
      event.reply('你是誰?我是誰?誰又知道呢?')
@@ -40,7 +48,7 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
      break
    default:
      event.reply('偶不知道你在說啥，不過你可以繼續說:)')
- }
+ }*/
 });app.post('/', linebotParser);app.listen(process.env.PORT || 3000, () => {
  console.log('Express server start')
 });
