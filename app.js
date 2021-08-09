@@ -30,7 +30,7 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
  }else if(findWords('說')){
    event.reply('說說說就你最吵')
  }else if(findWords('名字')||findWords('你叫')){
-   event.reply('我是河豚，你叫什麼?')
+   event.reply('我是烏龜，你叫什麼?')
  }else if(findWords('排球')){
    event.reply('一萬超愛排球少年！')
  }else if(findWords('我')&&findWords('傷心') || findWords('傷心')){
