@@ -44,7 +44,8 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
  }else if(findWords('哪個')|| findWords('選')){
    event.reply('都可以ㄅ')
  }else if(findWords('為什麼')|| findWords('為啥')){
-   event.reply('阿災')
+   event.reply('阿災，不過我可以幫你查查看')
+   event.reply('https://www.google.com/search?q=' + words)
  }else if(findWords('不要')|| findWords('不')){
    event.reply('誰管你;))))))')
  }else{
