@@ -43,6 +43,10 @@ const linebotParser = bot.parser();bot.on('message', function (event) {
    event.reply('哈哈哈笑死XDDD')
  }else if(findWords('哪個')|| findWords('選')){
    event.reply('都可以ㄅ')
+ }else if(findWords('為什麼')|| findWords('為啥')){
+   event.reply('阿災')
+ }else if(findWords('不要')|| findWords('不')){
+   event.reply('誰管你;))))))')
  }else{
    event.reply('偶不知道你在說啥，不過你可以繼續說:)')
  }
