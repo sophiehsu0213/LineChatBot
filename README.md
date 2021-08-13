@@ -1,5 +1,6 @@
 This is a Line Chatbot created by Sophiehsu.
 
+HOW TO USE:
 heroku login
 heroku create
 git push heroku master
